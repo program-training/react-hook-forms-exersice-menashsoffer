@@ -64,17 +64,6 @@ function RegularForm() {
               @email.com (missing part before @)
               valid@.com (missing domain name after @)
               
-              The regex to validate this is:
-              
-              /^[^@]+@[^@.]+.[^@.]+$/
-              
-              This matches:
-              - One or more non @ characters [^@]+
-              - Followed by a @ symbol 
-              - Followed by one or more non . characters [^@.]+ 
-              - Followed by a . 
-              - Followed by one or more non . characters again [^@.]+
-              
               Please ensure your email follows these rules!`,
             },
           })}
@@ -108,26 +97,6 @@ function RegularForm() {
               
               ValidPass123! 
               Password123@
-              
-              But not:
-              
-              short (too short)
-              LONGPASSWORD (too long)
-              password (missing number and special char)
-              PASSWORD123 (missing lowercase)
-              password123 (missing uppercase)
-              
-              The regex to validate this is:
-              
-              /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*()])[A-Za-z0-9!@#$%^&*()]{8,20}$/
-              
-              This checks for:
-              
-              - At least one number using (?=.*[0-9])
-              - At least one uppercase letter using (?=.*[A-Z]) 
-              - At least one lowercase letter using (?=.*[a-z])
-              - At least one special character using (?=.*[!@#$%^&*()])
-              - Length of 8-20 characters using {8,20}
               
               Please ensure your password follows these rules!`,
             },
